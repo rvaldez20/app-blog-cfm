@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Inicio from './components/Inicio';
 import Blog from './components/Blog';
 import AcercaDe from './components/AcercaDe';
+import Post from './components/Post';
 
 const App = () => {
   return ( 
@@ -18,7 +19,10 @@ const App = () => {
 			<Main>			
 				{/* cuando es de una linea se puede hacer asi)*/}	
 				<Route path="/" exact={true} component={Inicio} />				
+
 				<Route path="/blog" component={Blog} />
+				<Route path="/post/:id" component={Post} />			
+
 				<Route path="/acerca-de" component={AcercaDe} />
 
 				{/* O s epuede dejar de varia lineas */}	
